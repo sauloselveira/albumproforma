@@ -120,9 +120,9 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;justify-conten
 /* figurinha colada */
 .sticker{position:absolute;inset:0;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;background:#fff;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.3);animation:paste .55s cubic-bezier(.3,1.4,.4,1) both;z-index:4}
 @keyframes paste{0%{transform:scale(1.6) rotate(-7deg);opacity:0}60%{transform:scale(.96) rotate(1.5deg);opacity:1}100%{transform:scale(1) rotate(0)}}
-.sticker .photo{flex:1;min-height:0;position:relative;overflow:hidden;background:linear-gradient(165deg,#16305a,#0c1f33)}
-.sticker .photo img{width:100%;height:100%;object-fit:cover;display:block}
-.sticker .photo .placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#6f8cae}
+.sticker .photo{flex:1;min-height:0;position:relative;overflow:hidden;background:#fff}
+.sticker .photo img{width:100%;height:100%;object-fit:contain;display:block}
+.sticker .photo .placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#6f8cae;background:linear-gradient(165deg,#16305a,#0c1f33)}
 .sticker .photo .placeholder svg{width:52%}
 .sticker .plate{background:var(--c,var(--verde));color:#fff;padding:4px 5px;display:flex;align-items:center;justify-content:space-between;gap:4px}
 .sticker .plate .nm{font-family:'Anton';font-size:11px;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -281,7 +281,7 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;justify-conten
 .reveal-card .rc-back .blogo{width:72px;background:#fff;border-radius:9px;padding:4px;position:absolute}
 .reveal-card .rc-back .btxt{position:absolute;bottom:14px;font-size:10px;font-weight:900;letter-spacing:.2em;color:var(--amarelo);text-transform:uppercase}
 .reveal-card .rc-front{transform:rotateY(180deg);background:#fff;display:flex}
-.reveal-card .rc-front img{width:100%;height:100%;object-fit:cover}
+.reveal-card .rc-front img{width:100%;height:100%;object-fit:contain}
 .reveal-card .rc-front .placeholder{flex:1;display:grid;place-items:center;background:linear-gradient(165deg,#16305a,#0c1f33);color:#6f8cae}
 .reveal-card .rc-front .placeholder svg{width:50%}
 .reveal-card .rc-front .ph-name{position:absolute;bottom:0;left:0;right:0;background:var(--verde);color:#fff;font-family:'Anton';font-size:15px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:7px}
@@ -322,7 +322,7 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;justify-conten
 .dup-card{display:flex;flex-direction:column;align-items:center;gap:6px}
 .dup-thumb{position:relative;width:100%;aspect-ratio:3/4;border-radius:9px;overflow:hidden;background:#16305a;border:3px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.35)}
 .dup-thumb.gold{border:none;padding:3px;background:linear-gradient(160deg,#f9e9a8,#c89b2e)}
-.dup-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.dup-thumb img{width:100%;height:100%;object-fit:contain;display:block;background:#fff}
 .dup-thumb .placeholder{position:absolute;inset:0;display:grid;place-items:center;color:#6f8cae}
 .dup-thumb .placeholder svg{width:50%}
 .dup-thumb.img-fail{background:linear-gradient(165deg,#16305a,#0c1f33)}
@@ -333,7 +333,7 @@ main{flex:1;display:flex;flex-direction:column;align-items:center;justify-conten
 /* tela de envio */
 .trade-card{width:200px;aspect-ratio:3/4;margin:4px auto;border-radius:11px;overflow:hidden;background:#16305a;border:4px solid #fff;box-shadow:0 10px 28px rgba(0,0,0,.5)}
 .trade-card.gold{border:none;padding:5px;background:linear-gradient(160deg,#f9e9a8,#c89b2e)}
-.trade-card img{width:100%;height:100%;object-fit:cover;display:block;border-radius:7px}
+.trade-card img{width:100%;height:100%;object-fit:contain;display:block;border-radius:7px;background:#fff}
 .trade-card .placeholder{width:100%;height:100%;display:grid;place-items:center;color:#6f8cae}
 .trade-card .placeholder svg{width:48%}
 .trade-card.img-fail{background:linear-gradient(165deg,#16305a,#0c1f33)}
@@ -431,9 +431,9 @@ footer{padding:14px;text-align:center;font-size:11px;color:#5d7d9e;letter-spacin
   .pf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm}
   .pf-grid.gold{grid-template-columns:repeat(2,1fr);gap:14mm;margin-top:14mm;padding:0 18mm}
   .pf-cell{display:flex;flex-direction:column;align-items:center;break-inside:avoid}
-  .pf-img{width:100%;aspect-ratio:3/4;border:2.5pt solid #fff;border-radius:2.5mm;overflow:hidden;background:#16305a;box-shadow:0 1.5pt 4pt rgba(0,0,0,.25)}
+  .pf-img{width:100%;aspect-ratio:3/4;border:2.5pt solid #fff;border-radius:2.5mm;overflow:hidden;background:#fff;box-shadow:0 1.5pt 4pt rgba(0,0,0,.25)}
   .pf-cell.gold .pf-img{border:none;padding:2.5pt;background:linear-gradient(160deg,#f9e9a8,#c89b2e);border-radius:3mm}
-  .pf-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .pf-img img{width:100%;height:100%;object-fit:contain;display:block}
   .pf-ph{width:100%;height:100%;display:grid;place-items:center;color:#fff;font-family:'Anton';font-size:9pt;text-align:center;padding:2mm}
   .pf-cap{font-family:'Anton';font-size:8.5pt;margin-top:1.5mm;color:#1c2330;text-transform:uppercase;text-align:center;line-height:1}
   .pf-gold-title{font-family:'Anton';font-size:22pt;color:#8a6410;text-align:center}
