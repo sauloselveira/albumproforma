@@ -722,12 +722,11 @@ function getPackDay(){
 function packsLeftToday(){ return Math.max(0, DAILY_LIMIT - getPackDay().count); }
 function consumePack(){ const d=getPackDay(); d.count++; store.set(K_PACKDAY, JSON.stringify(d)); }
 
-/* ---- Raridade ---- */
-/* Mais raras: Gold (Elia, Rodolfo) + Emílio(1), Herbet(13), Matheus(17), Hiago(31) */
 /* ---- Raridade ---- (mais raras: Gold + atletas com rare:true) */
+/* Pesos ajustados para "bem mais fácil": Gold ~2,6%/figurinha, raras com boa frequência */
 function athleteWeight(a){
-  if(a.gold) return 1;   // raríssima (Gold)
-  if(a.rare) return 3;   // raras
+  if(a.gold) return 9;   // Gold — bem mais fácil de tirar
+  if(a.rare) return 13;  // raras — aparecem com boa regularidade
   return 14;             // comuns
 }
 
